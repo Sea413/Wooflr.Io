@@ -39,6 +39,10 @@ body {
 .item-active {
   padding: 20px;
 }
+#confirmForm {
+  display: none;
+}
+
 
 /*.jumbotron {
     margin-bottom: 0px;
