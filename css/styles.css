@@ -1,0 +1,50 @@
+body {
+  padding-top: 70px;
+}
+
+.container {
+  max-width: 1000px;
+}
+
+.jumbotron {
+  text-align: center;
+  background-image: url("../img/background.jpg");
+  text-shadow: white 0.3em 0.3em 0.3em;
+}
+
+.glyphicon {
+  font-size: .85em;
+  color: #216d3d;
+}
+
+.carousel-indicators {
+  bottom: 0;
+}
+
+.carousel-indicators .active {
+  background-color: #000099;
+}
+
+.carousel-indicators li {
+  border-color: #000099;
+}
+
+.item img {
+  width: 100%;
+  max-width: 400px;
+  max-height: 200px;
+  display: flex;
+}
+
+.item-active {
+  padding: 20px;
+}
+
+/*.jumbotron {
+    margin-bottom: 0px;
+    background-position: 0% 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+
+}*/
