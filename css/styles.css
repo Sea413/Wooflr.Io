@@ -36,6 +36,10 @@ body {
 .item-active {
   padding: 20px;
 }
+#confirmForm {
+  display: none;
+}
+
 
 #inputDate1 {
   width: 300px;
