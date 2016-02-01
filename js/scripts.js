@@ -39,8 +39,10 @@ $(document).ready(function() {
     event.preventDefault();
     var nameentry = $("input#name").val();
     var ddate = new Dog(nameentry,dage,dsize);
-    var dage = parseint()"input#age").val();
-    var dsize = $("?????????").val();
+    var dage = $("select#age").val();
+    var dsize = $("select#size").val();
+    var dtime = $("select#time").val();
+
     $("#customern").append(nameentry);
     $("#size").show();
     ddate.doginfo();
