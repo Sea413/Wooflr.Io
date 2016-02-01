@@ -57,9 +57,15 @@ $(document).ready(function() {
   $("form#dogForm").submit(function(event) {
     event.preventDefault();
     var nameentry = $("input#name").val();
-    var dage = $("select#age").val();
     var dsize = $("select#size").val();
     var ddate = new Dog(nameentry,dage,dsize);
+    var dage = $("select#age").val();
+    var dtime = $("select#time").val();
+
+    $("#customern").append(nameentry);
+    $("#size").show();
+    ddate.doginfo();
+
     // $("#dinfo").append(nameentry);
     // $("#dsize").append(dage);
     // $("#dsize").append(dsize);
