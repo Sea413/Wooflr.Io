@@ -9,8 +9,9 @@ function Playdate(time,place,rng) {
   this.place = place;
   this.rng = 0;
   this.dogs = [];
-}
-function Jerry(jname,jage,jsize,rng) {
+};
+
+function Jerry(jname,jage,jsize) {
   this.jname = "Gimli";
   this.jage = "15";
   this.jsize = "Obese";
@@ -21,36 +22,86 @@ function Wesley(wname,wage,wsize) {
   this.wsize = "Fabulous";
 };
 function Berney(bname,bage,bsize) {
-  this.bname = "Sandy";
-  this.bage = "2";
-  this.bsize = "Mediumish";
+  this.bname = bname;
+  this.bage = bage;
+  this.bsize = bsize;
 };
-function Zues (zname,zage,zsize) {
-  this.zname = "Apollo";
-  this.zage = "6";
-  this.zsize = "small";
+function Zeus (zname,zage,zsize) {
+  this.zname = zname;
+  this.zage = zage;
+  this.zsize = zsize;
 };
 
-Playdate.prototype.companion = function(){
-  var random = Math.floor((Math.random()*4) + 1);
+Berney.prototype.companion = function(){
+  var random = Math.floor((Math.random()*2) + 1);
+  var rng = 0;
   this.rng += random;
   if (rng === 1) {
-    var newJerry = new Jerry;
-    return newJerry;
-  } else if (rng === 2) {
-    var newWesley = new Wesley;
-    return newWesley;
-    } else if (rng === 3) {
-      var newBerney = new Berney;
-      return newBerney;
-      } else if (rng === 4) {
-        var newZues = new Zues;
-        return newZues;
-        }
+    this.bname ="Sandy";
+    this.bage ="12";
+    this.bsize = "Mediumish";
+    } else if (rng !== 1) {
+      return;
+    }
   };
+
+  Wesley.prototype.companion = function(){
+    var random = Math.floor((Math.random()*2) + 1);
+    var rng = 0;
+    this.rng += random;
+    if (rng === 1) {
+      this.wname = "Snoop Dog";
+      this.wage = "5";
+      this.wsize = "Fabulous";
+      } else if (rng !== 1) {
+        return;
+      }
+    };
+
+    Zeus.prototype.companion = function(){
+      var random = Math.floor((Math.random()*2) + 1);
+      var rng = 0;
+      this.rng += 1;
+      if (rng === 1) {
+        this.zname = "Apollo";
+        this.zage = "6";
+        this.zsize = "small"
+        } else if (rng !== 1) {
+          return;
+        }
+      };
+
+      Jerry.prototype.companion = function(){
+        var random = Math.floor((Math.random()*2) + 1);
+        var rng = 0;
+        this.rng += random;
+        if (rng === 1) {
+          this.jname = "Gimli";
+          this.jage = "15";
+          this.jsize = "Obese";
+          } else if (rng !== 1) {
+            return;
+          }
+        };
 
   Dog.prototype.dogInfo = function(){
     return this.dname + " " + this.age + " " + this.dsize;
+  };
+
+  Berney.prototype.dogInfo = function(){
+    toString(this.bname + " " + this.bage + " " + this.bsize);
+  };
+
+  Wesley.prototype.dogInfo = function(){
+    toString(this.wname + " " + this.wage + " " + this.wsize);
+  };
+
+  Zeus.prototype.dogInfo = function(zname,zage,zsize){
+  return this.zname + " " + this.zage + " " + this.zsize;
+  };
+
+  Jerry.prototype.dogInfo = function(){
+    return this.jname + " " + this.jage + " " + this.jsize;
   };
 
 $(document).ready(function() {
@@ -64,12 +115,31 @@ $(document).ready(function() {
     // $("#dsize").append(dage);
     // $("#dsize").append(dsize);
     // $("#confirmForm").show();
-      $("form#confirmForm").submit(function(event) {
+      // var newBerney = new Berney();
+      // var newWesley = new Wesley();
+      // var newZeus = new Zeus();
+      // var newJerry = new Jerry();
+      // newBerney.companion();
+      // newWesley.companion();
+      // newZeus.companion();
+      // newJerry.companion();
+      // $("#test").append(newZeus.dogInfo);
+      // $("form#confirmForm").submit(function(event) {
+        var newBerney = new Berney();
+        var newWesley = new Wesley();
+        var newZeus = new Zeus();
+        var newJerry = new Jerry();
+        newBerney.companion();
+        newWesley.companion();
+        newZeus.companion();
+        newJerry.companion();
+        $("#test").append(newZeus.companion());
         event.preventDefault();
+      // $("form#confirmForm").submit(function(event) {
+      //   event.preventDefault();
+      //   var timeDate = new Playdate();
+      // $("#test").append(timeDate.companion);
 
-
-    ddate.dogInfo();
-
+// });
      });
      });
-      });
