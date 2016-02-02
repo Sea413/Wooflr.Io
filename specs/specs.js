@@ -20,4 +20,5 @@ describe("Playdate", function() {
   expect(testObject.place).to.equal("Forest Park")
   expect(testObject.dogs).to.eql([]);
 });
+
 });
