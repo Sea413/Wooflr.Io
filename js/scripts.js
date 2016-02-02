@@ -1,7 +1,9 @@
-function Dog(dname,age,dsize) {
+function Dog(dname,dsize,dage,dtime,dcalendar) {
   this.dname = dname;
-  this.age = age;
   this.dsize = dsize;
+  this.dage = dage;
+  this.dtime = dtime;
+  this.dcalendar = dcalendar;
 };
 
 function Playdate(time,place,rng) {
@@ -61,19 +63,24 @@ $(document).ready(function() {
     var dage = $("select#age").val();
     var dtime = $("select#time").val();
     var dcalendar = $("input#inputCalendar").val();
-    var dplayDate = new Dog(nameentry,dage,dsize,dtime);
+    var newDog = new Dog(nameentry,dsize,dage,dtime,dcalendar);
 
-    $("#confirmForm").show();
-    $("#dname").append(nameentry);
-    $("#dage").append(dage);
-    $("#dsize").append(dsize);
-    $("#dtime").append(dtime);
-    $("#dcalendar").append(dcalendar);
+    $("#findDate").show();
+    $("#dname").append(newDog.dname);
+    $("#dage").append(newDog.dage);
+    $("#dsize").append(newDog.dsize);
+    $("#dtime").append(newDog.dtime);
+    $("#dcalendar").append(newDog.dcalendar);
 
-    $("form#confirmForm").submit(function(event) {
-      event.preventDefault();
+  });
 
+  $("#findYourDate").click(function() {
+    $(".yourDate").show();
+    //append random dog name//
+    //append random dog age//
+    //append random dog size//
+    $("#dtimeConfirm").text(newDog.dtime);
+    $("#dcalendarConfirm").text(newDog.dcalendar);
 
-     });
-     });
-      });
+  });
+});
