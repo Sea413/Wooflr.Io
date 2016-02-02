@@ -1,76 +1,57 @@
-function Dog(dname,dsize,dage,dtime,dcalendar) {
+
+function Dog() {
   this.dname = dname;
-  this.dsize = dsize;
   this.dage = dage;
-  this.dtime = dtime;
-  this.dcalendar = dcalendar;
+  this.dsize = dsize;
+  this.appendvar = [];
+  this.img = []
 };
 
-function Playdate(time,place,rng) {
-  this.time = time;
-  this.place = place;
-  this.rng = 0;
-  this.dogs = [];
-}
-function Jerry(jname,jage,jsize,rng) {
-  this.jname = "Gimli";
-  this.jage = "15";
-  this.jsize = "Obese";
-};
-function Wesley(wname,wage,wsize) {
-  this.wname = "Snoop Dog";
-  this.wage = "5";
-  this.wsize = "Fabulous";
-};
-function Berney(bname,bage,bsize) {
-  this.bname = "Sandy";
-  this.bage = "2";
-  this.bsize = "Mediumish";
-};
-function Zues (zname,zage,zsize) {
-  this.zname = "Apollo";
-  this.zage = "6";
-  this.zsize = "small";
-};
-
-Playdate.prototype.companion = function(){
+Dog.prototype.nameselect = function(random){
   var random = Math.floor((Math.random()*4) + 1);
-  this.rng += random;
-  if (rng === 1) {
-    var newJerry = new Jerry;
-    return newJerry;
-  } else if (rng === 2) {
-    var newWesley = new Wesley;
-    return newWesley;
-    } else if (rng === 3) {
-      var newBerney = new Berney;
-      return newBerney;
-      } else if (rng === 4) {
-        var newZues = new Zues;
-        return newZues;
-        }
+  if (random === 1) {
+    for (var i = 1; i <= 1; i++) {
+    this.appendvar.push("Gimli"," 15"," Obese")
+    this.img.push("#gimliimg")
+  }
+} else if (random === 2) {
+    for (var i = 1; i <= 1; i++) {
+    this.appendvar.push("Snoop Dog"," 5"," Fabulous")
+    this.img.push("#snoopimg")
+  }
+} else if (random === 3) {
+    for (var i = 1; i <= 1; i++) {
+    this.appendvar.push("Sandy", " 2", " Mediumish")
+    this.img.push("#sandyimg")
+  }
+} else if (random === 4) {
+     for (var i = 1; i <= 1; i++) {
+     this.appendvar.push("Apollo"," 6"," Small")
+     this.img.push("#apolloimg")
+   }
+   }
   };
-
-  Dog.prototype.dogInfo = function(){
-    return this.dname + " " + this.age + " " + this.dsize;
-  };
-
 $(document).ready(function() {
   $("form#dogForm").submit(function(event) {
     event.preventDefault();
+    var sequence = new Dog();
+    sequence.nameselect();
     var nameentry = $("input#name").val();
     var dsize = $("select#size").val();
     var dage = $("select#age").val();
     var dtime = $("select#time").val();
     var dcalendar = $("input#inputCalendar").val();
-    var newDog = new Dog(nameentry,dsize,dage,dtime,dcalendar);
 
-    $("#findDate").show();
-    $("#dname").append(newDog.dname);
-    $("#dage").append(newDog.dage);
-    $("#dsize").append(newDog.dsize);
-    $("#dtime").append(newDog.dtime);
-    $("#dcalendar").append(newDog.dcalendar);
 
-  });
-});
+    var selector = sequence.img.toString();
+
+    $(selector).show();
+    $("#confirmForm").show();
+    $("#dname").append(nameentry);
+    $("#dage").append(dage);
+    $("#dsize").append(dsize);
+    $("#dtime").append(dtime);
+    $("#dcalendar").append(dcalendar);
+    $("#test").append(sequence.appendvar);
+     });
+     });
