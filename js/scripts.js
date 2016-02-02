@@ -58,23 +58,21 @@ $(document).ready(function() {
     event.preventDefault();
     var nameentry = $("input#name").val();
     var dsize = $("select#size").val();
-    var ddate = new Dog(nameentry,dage,dsize);
     var dage = $("select#age").val();
     var dtime = $("select#time").val();
+    var dcalendar = $("input#inputCalendar").val();
+    var dplayDate = new Dog(nameentry,dage,dsize,dtime);
 
-    $("#customern").append(nameentry);
-    $("#size").show();
-    ddate.doginfo();
+    $("#confirmForm").show();
+    $("#dname").append(nameentry);
+    $("#dage").append(dage);
+    $("#dsize").append(dsize);
+    $("#dtime").append(dtime);
+    $("#dcalendar").append(dcalendar);
 
-    // $("#dinfo").append(nameentry);
-    // $("#dsize").append(dage);
-    // $("#dsize").append(dsize);
-    // $("#confirmForm").show();
-      $("form#confirmForm").submit(function(event) {
-        event.preventDefault();
+    $("form#confirmForm").submit(function(event) {
+      event.preventDefault();
 
-
-    ddate.dogInfo();
 
      });
      });

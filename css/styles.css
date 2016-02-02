@@ -2,6 +2,9 @@ body {
   padding-top: 70px;
 }
 
+#confirmForm{
+  display: none;
+}
 .container {
   max-width: 1000px;
 }
@@ -12,6 +15,7 @@ body {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+
   width: 100%;
   height: 400px;
 }
@@ -36,12 +40,16 @@ body {
 .item-active {
   padding: 20px;
 }
+
+.carousel-caption {
+  color: black;
+}
 #confirmForm {
   display: none;
 }
 
 
-#inputDate1 {
+#inputCalendar {
   width: 300px;
 }
 
