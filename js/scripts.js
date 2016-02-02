@@ -73,14 +73,4 @@ $(document).ready(function() {
     $("#dcalendar").append(newDog.dcalendar);
 
   });
-
-  $("#findYourDate").click(function() {
-    $(".yourDate").show();
-    //append random dog name//
-    //append random dog age//
-    //append random dog size//
-    $("#dtimeConfirm").text(newDog.dtime);
-    $("#dcalendarConfirm").text(newDog.dcalendar);
-
-  });
 });

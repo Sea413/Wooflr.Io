@@ -56,6 +56,8 @@ body {
 
 #infoSection {
   border: solid 2px;
+  background-color: #e6e6e6;
+  border-color: #e6e6e6;
 }
 
 .carousel-caption {
