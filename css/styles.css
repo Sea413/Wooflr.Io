@@ -85,6 +85,18 @@ body {
 #time{
   width: 300px;
 }
+#sandyimg{
+  display: none;
+}
+#apolloimg {
+  display: none;
+}
+#gimliimg{
+  display: none;
+}
+#snoopimg{
+display: none;
+}
 
 /*.jumbotron {
     margin-bottom: 0px;
