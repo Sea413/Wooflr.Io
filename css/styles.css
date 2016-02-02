@@ -2,15 +2,28 @@ body {
   padding-top: 70px;
 }
 
-#confirmForm{
+#findDate {
   display: none;
 }
+
+#yourDate {
+  display: none;
+}
+
+.dropdown {
+  margin-top: 16px;
+}
+
+.navbar-brand {
+  margin-top: 9px;
+}
+
 .container {
   max-width: 1000px;
 }
 
 .jumbotron {
-  text-align: left;
+  text-align: center;
   background-image: url("../img/dogbackground.jpg");
   background-position: center;
   background-size: contain;
@@ -39,6 +52,10 @@ body {
 
 .item-active {
   padding: 20px;
+}
+
+#infoSection {
+  border: solid 2px;
 }
 
 .carousel-caption {
