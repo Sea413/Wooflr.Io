@@ -42,19 +42,9 @@ $(document).ready(function() {
     var dtime = $("select#time").val();
     var dcalendar = $("input#inputCalendar").val();
 
+
     var selector = sequence.img.toString();
-    // if (random === 1) {
-    //   $("#gimliimg").show();
-    // }
-    //  else if (random === 2) {
-    //   $("#snoopimg").show();
-    // }
-    //  else if (random === 3) {
-    //   $("#sandyimg").show();
-    // }
-    //   else if (random === 4) {
-    //    $("#apolloimg").show();
-    //  }
+
     $(selector).show();
     $("#confirmForm").show();
     $("#dname").append(nameentry);
@@ -65,4 +55,3 @@ $(document).ready(function() {
     $("#test").append(sequence.appendvar);
      });
      });
->>>>>>> MVP
