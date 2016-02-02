@@ -12,6 +12,10 @@ expect(testObject.age).to.equal("12");
 expect(testObject.dsize).to.equal("large");
 expect(testObject.dogInfo()).to.equal("Jerry 12 large");
 });
+it("Attempt to reverse engineer function inputs", function(){
+var testObject = new Dog ();
+expect(testObject.nameselect(3)).to.equal("Sandy", "2", "mediumish");
+});
 });
 describe("Playdate", function() {
   it("stores info on playdate time, place, and attending dogs", function(){
