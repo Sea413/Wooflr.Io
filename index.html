@@ -30,7 +30,10 @@
        <ul class="nav navbar-nav navbar-right">
          <li class="btn btn-link"><a href="http://google.com">Home</a></li>
          <li class="btn btn-link"><a href="http://google.com">Log in</a></li>
-         <li class="btn btn-link"><a href="http://google.com">Sign up</a></li>
+         <li class="btn btn-link"><a href=".modal" data-toggle="modal">Sign up</a></li>
+
+              <!-- Modal content-->
+
          <li class="dropdown">
            <button class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown">Adopt a dog
              <span class="caret"></span></button>
@@ -42,8 +45,37 @@
            </li>
        </ul>
      </div>
+
    </div>
  </div>
+
+ <div class="modal" role="dialog">
+   <div class="modal-dialog modal-lg">
+     <div class="modal-content">
+       <div class="modal-header">
+         <button type="button" class="close" data-dismiss="modal" aria-label="close"><span aria-hidden="true">&times;</span></button>
+         <h4 class="modal-title">Please enter your information</h4>
+       </div>
+       <div class="modal-body">
+         <form>
+           First name:<br>
+           <input type="text" name="firstname"><br>
+           Last name:<br>
+           <input type="text" name="lastname"><br>
+           Email Address:<br>
+           <input type="text" name="emailAddress"><br>
+           Password:<br>
+           <input type="text" name="password"><br>
+           Re-enter Password:<br>
+           <input type="text" name="reEnterPassword"><br>
+         </form>
+       </div>
+       <div class="modal-footer">
+         <button class="btn btn-success" data-dismiss="modal" role="button">Sign up</button>
+       </div>
+     </div><!-- /.modal-content -->
+   </div><!-- /.modal-dialog -->
+ </div><!-- /.modal -->
 
   <div id="myCarousel" class="carousel slide" data-ride="carousel"> <!--Begin Carousel-->
     <div class="jumbotron"> <!--Begin Jumbotron-->
@@ -195,30 +227,23 @@
                 <li><a href="http://www.costumeexpress.com/c/pet-costumes/_/N-aZ1u">Even More Dog Costumes</a></li>
               </ul>
       </div>
-      
-
-  </div> <!--End Container-->
-</body>
-        <button type="submit" class="btn btn-info" name="button">Submit</button>
-    </form>
-
-    <form id="confirmForm">
-      <p>Your dog's name: <span id="dname"></span></p>
-      <p>Your dog's age: <span id="dage"></span></p>
-      <p>Your dog's size: <span id="dsize"></span></p>
-      <p>Your available date: <span id="dcalendar"></span></p>
-      <p>Your preferred time: <span id="dtime"></span></p>
-
-      <button id="button2" type="submit" class="btn btn-info" name="button">Find Your Date</button>
-    </form>
-    <div id="test">
     </div>
-    <img id = "sandyimg" src="img/Sandy.jpg" alt="Sandy" />
-    <img id = "gimliimg" src="img/Gimli.jpg" alt="Gimli" />
-    <img id= "apolloimg" src="img/Apollo.jpg" alt="Apollo" />
-    <img id= "snoopimg" src="img/SnoopDog.jpg" alt="Snoop Dog" />
-    </div> <!--End Container-->
-  </body>
-  <footer>
-  </footer>
+
+      <div class="row">
+        <div id="test">
+        </div>
+        <img id = "sandyimg" src="img/Sandy.jpg" alt="Sandy" />
+        <img id = "gimliimg" src="img/Gimli.jpg" alt="Gimli" />
+        <img id= "apolloimg" src="img/Apollo.jpg" alt="Apollo" />
+        <img id= "snoopimg" src="img/SnoopDog.jpg" alt="Snoop Dog" />
+      </div>
+
+      </div> <!--End Container-->
+
+</body>
+
+
+
+
+
 </html>

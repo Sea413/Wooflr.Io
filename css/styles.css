@@ -18,6 +18,10 @@ body {
   margin-top: 9px;
 }
 
+#modalBtn {
+  margin-top: 16px;
+}
+
 .container {
   max-width: 1000px;
 }
