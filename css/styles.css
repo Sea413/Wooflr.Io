@@ -111,7 +111,10 @@ body {
   display: none;
 }
 #snoopimg{
-display: none;
+  display: none;
+}
+#samuelimg{
+  display: none;
 }
 
 /*.jumbotron {
