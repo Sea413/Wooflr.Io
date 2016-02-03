@@ -46,7 +46,7 @@ $(document).ready(function() {
     var selector = sequence.img.toString();
 
     $(selector).show();
-    $("#confirmForm").show();
+    $("#findDate").show();
     $("#dname").append(nameentry);
     $("#dage").append(dage);
     $("#dsize").append(dsize);
