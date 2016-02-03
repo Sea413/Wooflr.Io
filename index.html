@@ -44,7 +44,6 @@
      </div>
    </div>
  </div>
-
   <div id="myCarousel" class="carousel slide" data-ride="carousel"> <!--Begin Carousel-->
     <div class="jumbotron"> <!--Begin Jumbotron-->
       <h1>Wooflr</h1>
@@ -84,7 +83,7 @@
 
       </div>
 
-      <!-- Controls -->
+
       <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
@@ -94,10 +93,10 @@
         <span class="sr-only">Next</span>
       </a>
 
-    </div> <!--End Jumbotron-->
-  </div> <!--End Carousel-->
+    </div>
+  </div>
 
-  <div class="container"> <!--Begin Container-->
+  <div class="container">
     <div class="row">
       <div class="col-sm-4">
         <form id="dogForm">
@@ -135,7 +134,8 @@
 
             <div class="fileUpload btn btn-primary">
                 <span>Upload a photo of you and your dog</span>
-                <input type="file" class="upload" />
+                <input type='file' />
+                <img id="myImg" src="#" alt="your image" />
             </div>
             <br>
             <br>
@@ -153,9 +153,6 @@
           <p>Your preferred time: <span id="dtime"></span></p>
         </div>
       </div>
-
-
-
       <div class="col-sm-4">
 
       </div>
@@ -195,16 +192,7 @@
                 <li><a href="http://www.costumeexpress.com/c/pet-costumes/_/N-aZ1u">Dog Costumes</a></li>
               </ul>
       </div>
-        <!-- <div id="yourDate"> -->
-          <!-- <p>Your match's name: <span id=" "></span></p> <!--figure out id and variable-->
-          <!-- <p>Your match's age: <span id=" "></span></p> <!--figure out id and variable-->
-          <!-- <p>Your match's size: <span id=" "></span></p> <!--figure out id and variable-->
-          <!-- <p>Playdate date: <span id="dcalendarConfirm"></span></p> -->
-          <!-- <p>Playdate time: <span id="dtimeConfirm"></span></p> -->
 
-          <!-- <button id="confirmYourDate" class="btn btn-info" name="button">Confirm your playdate</button> -->
-        <!-- </div> -->
-      <!-- </div> -->
 
   </div> <!--End Container-->
 </body>
@@ -226,7 +214,7 @@
     <img id = "gimliimg" src="img/Gimli.jpg" alt="Gimli" />
     <img id= "apolloimg" src="img/Apollo.jpg" alt="Apollo" />
     <img id= "snoopimg" src="img/SnoopDog.jpg" alt="Snoop Dog" />
-    </div> <!--End Container-->
+    </div>
   </body>
   <footer>
   </footer>

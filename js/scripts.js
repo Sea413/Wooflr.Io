@@ -1,14 +1,16 @@
 
 function Dog() {
-  this.dname = dname;
-  this.dage = dage;
-  this.dsize = dsize;
   this.appendvar = [];
   this.img = []
 };
-
+function rover(dname,dage,dsize){
+  this.dname =dname;
+  this.dage =dage;
+  this.dsize =dsize;
+  this.grog =[];
+}
 Dog.prototype.nameselect = function(random){
-  var random = Math.floor((Math.random()*4) + 1);
+  var random = Math.floor((Math.random()*5) + 1);
   if (random === 1) {
     for (var i = 1; i <= 1; i++) {
     this.appendvar.push("Gimli"," 15"," Obese")
@@ -29,7 +31,27 @@ Dog.prototype.nameselect = function(random){
      this.appendvar.push("Apollo"," 6"," Small")
      this.img.push("#apolloimg")
    }
+   else if (random === 5) {
+        for (var i = 1; i <= 1; i++) {
+        this.appendvar.push("Apollo"," 6"," Small")
+        this.img.push("#apolloimg")
    }
+  };
+  rover.prototype.fullinfo= function(){
+    return this.dname + " " + this.dage + " " + this.dsize;
+}
+  }
+  $(function () {
+      $(":file").change(function () {
+          if (this.files && this.files[0]) {
+              var reader = new FileReader();
+              reader.onload = imageIsLoaded;
+              reader.readAsDataURL(this.files[0]);
+          }
+      });
+  });
+  function imageIsLoaded(e) {
+      $('#myImg').attr('src', e.target.result);
   };
 $(document).ready(function() {
   $("form#dogForm").submit(function(event) {
@@ -41,20 +63,9 @@ $(document).ready(function() {
     var dage = $("select#age").val();
     var dtime = $("select#time").val();
     var dcalendar = $("input#inputCalendar").val();
+    var newRover = new rover(nameentry,dage,dsize);
 
     var selector = sequence.img.toString();
-    // if (random === 1) {
-    //   $("#gimliimg").show();
-    // }
-    //  else if (random === 2) {
-    //   $("#snoopimg").show();
-    // }
-    //  else if (random === 3) {
-    //   $("#sandyimg").show();
-    // }
-    //   else if (random === 4) {
-    //    $("#apolloimg").show();
-    //  }
     $(selector).show();
     $("#confirmForm").show();
     $("#dname").append(nameentry);
@@ -65,4 +76,3 @@ $(document).ready(function() {
     $("#test").append(sequence.appendvar);
      });
      });
->>>>>>> MVP
