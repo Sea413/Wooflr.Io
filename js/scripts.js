@@ -88,6 +88,7 @@ $(document).ready(function() {
     var selector = newDog.appendvar[0].imgtag.toString();
 
     $(selector).show();
+
     $("#confirmForm").show();
     $("#dname").append(newDog.dname);
     $("#dage").append(newDog.dage);
@@ -97,5 +98,5 @@ $(document).ready(function() {
     $("#match-dname").append(newDog.appendvar[0].dname);
     $("#match-dage").append(newDog.appendvar[0].dage);
     $("#match-dsize").append(newDog.appendvar[0].dsize);
-     });
-     });
+  });
+});
