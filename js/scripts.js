@@ -89,13 +89,13 @@ $(document).ready(function() {
     $(selector).show();
 
     $("#findDate").show();
-    $("#dname").append(newDog.dname);
-    $("#dage").append(newDog.dage);
-    $("#dsize").append(newDog.dsize);
-    $("#dtime").append(dtime);
-    $("#dcalendar").append(dcalendar);
-    $("#match-dname").append(newDog.appendvar[0].dname);
-    $("#match-dage").append(newDog.appendvar[0].dage);
-    $("#match-dsize").append(newDog.appendvar[0].dsize);
+    $("#dname").html(newDog.dname);
+    $("#dage").html(newDog.dage);
+    $("#dsize").html(newDog.dsize);
+    $("#dtime").html(dtime);
+    $("#dcalendar").html(dcalendar);
+    $("#match-dname").html(newDog.appendvar[0].dname);
+    $("#match-dage").html(newDog.appendvar[0].dage);
+    $("#match-dsize").html(newDog.appendvar[0].dsize);
   });
 });
