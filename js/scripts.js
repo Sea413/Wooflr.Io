@@ -11,20 +11,15 @@ Dog.prototype.nameselect = function(){
   if (this.dsize === database.dogs[0].dsize) {
     this.appendvar.push(database.dogs[0]);
   } else if (this.dsize === database.dogs[1].dsize) {
-    this.appendvar.push(database.dogs[1]);
+      this.appendvar.push(database.dogs[1]);
+  } else if (this.dsize === database.dogs[2].dsize) {
+      this.appendvar.push(database.dogs[2]);
+  } else if (this.dsize === database.dogs[3].dsize) {
+      this.appendvar.push(database.dogs[3]);
+  } else if (this.dsize === database.dogs[4].dsize) {
+      this.appendvar.push(database.dogs[4]);
   }
-// } else if (random === 3) {
-//     for (var i = 1; i <= 1; i++) {
-//     this.appendvar.push("Sandy", " 2", " Mediumish")
-//     this.img.push("#sandyimg")
-//   }
-// } else if (random === 4) {
-//      for (var i = 1; i <= 1; i++) {
-//      this.appendvar.push("Apollo"," 6"," Small")
-//      this.img.push("#apolloimg")
-//    }
-//    }
-  };
+};
 
   // Fake JSON Database //
 
@@ -63,6 +58,19 @@ var database = {
   ]
 }
   // End Fake Database //
+
+$(function () {
+     $(":file").change(function () {
+         if (this.files && this.files[0]) {
+             var reader = new FileReader();
+             reader.onload = imageIsLoaded;
+             reader.readAsDataURL(this.files[0]);
+         }
+     });
+ });
+ function imageIsLoaded(e) {
+     $('#myImg').attr('src', e.target.result);
+ };
 
 $(document).ready(function() {
   $("form#dogForm").submit(function(event) {
