@@ -130,115 +130,106 @@
     </div> <!--End Jumbotron-->
   </div> <!--End Carousel-->
 
-  <div class="container"> <!--Begin Container-->
-    <div class="row">
-      <div class="col-sm-4">
-        <form id="dogForm">
-            <label for="name">What's the name of your dog?</label><br>
-              <input id="name" class="form-control" type="text"><br>
-
-            <label for="size">How big is your dog?</label><br>
-            <select id="size" class="form-control">
-              <option value="x-small">x-small</option>
-              <option value="small">small</option>
-              <option value="medium">medium</option>
-              <option value="large">large</option>
-              <option value="x-large">x-large</option>
-            </select><br>
-
-            <label for="age">How old is your dog?</label><br>
-            <select id="age" class="form-control">
-              <option value="puppy">puppy</option>
-              <option value="youngAdult">young adult</option>
-              <option value="adult">adult</option>
-              <option value="geriatric">geriatric</option>
-            </select><br>
-
-            <label for="time">What time are you available?</label><br>
-            <select id="time" class="form-control">
-              <option value="morning">morning</option>
-              <option value="afternoon">afternoon</option>
-              <option value="evening">evening</option>
-            </select><br>
-
-            <div class="form-group">
-              <label for="inputDate1">Play date?</label>
-              <input type="date" class="form-control" id="inputCalendar" placeholder="Date">
-            </div>
-
-            <div class="fileUpload btn btn-primary">
-                <span>Upload a photo of you and your dog</span>
-                <input type="file" class="upload" />
-            </div>
-            <br>
-            <br>
-
-            <button type="submit" class="btn btn-info" name="button">Submit</button>
-        </form>
-        <br>
-
-
-        <div id="findDate">
-          <p>Your dog's name: <span id="dname"></span></p>
-          <p>Your dog's age: <span id="dage"></span></p>
-          <p>Your dog's size: <span id="dsize"></span></p>
-          <p>Your available date: <span id="dcalendar"></span></p>
-          <p>Your preferred time: <span id="dtime"></span></p>
-        </div>
-      </div>
-
-      <div class="col-sm-4 col-sm-offset-4" id="infoSection">
-        <h3>Addtional Information</h3>
-          <ul>
-            <li>Dog Adoption Tips</li>
-              <ul>
-                <li><a href="https://www.petfinder.com/dogs/bringing-a-dog-home/tips-for-first-30-days-dog/">The first 30 days</a></li>
-                <li><a href="http://www.quickanddirtytips.com/pets/dog-care/how-to-bring-a-newly-adopted-dog-home">Bringing them home</a></li>
-                <li><a href="http://www.humanesociety.org/animals/dogs/tips/bringing_new_dog_home.html?referrer=https://www.google.com/">Humane Society</a></li>
-                <li><a href="http://www.adoptapet.com/blog/10-tips-for-welcoming-home-your-newly-adopted-dog/">Tips</a></li>
-              </ul>
-            <li>Playing together safely</li>
-              <ul>
-                <li><a href="https://www.cesarsway.com/dog-training/socialization/what-to-do-when-dogs-play-too-rough">Caesar's Advice</a></li>
-                <li><a href="http://www.animalleague.org/expert-advice/training/training-articles/dog-puppy-articles/appropriate-play.html?referrer=https://www.google.com/">Animal League</a></li>
-                <li><a href="http://thebark.com/content/your-dogs-rough-play-appropriate">thebark.com</a></li>
-              </ul>
-            <li>Dog Health</li>
-              <ul>
-                <li><a href="http://www.fidosavvy.com/puppy-health.html">Puppy</a></li>
-                <li><a href="http://www.hillspet.com/en/us/dog-care/routine-care/keeping-adult-dog-healthy">Adult</a></li>
-                <li><a href="https://www.avma.org/public/PetCare/Pages/Caring-for-an-Older-Pet-FAQs.aspx">Senior</a></li>
-              </ul>
-            <li>Dog Training</li>
-              <ul>
-                <li><a href="http://www.happygoluckydog.com/">Happy Go Lucky</a></li>
-                <li><a href="http://synergybehavior.com/">Synergy Behavior</a></li>
-                <li><a href="http://www.coopersdogtraining.com/">Cooper's Dog training</a></li>
-              </ul>
-            <li>Shop</li>
-              <ul>
-                <li><a href="http://www.partycity.com/category/halloween+costumes/dog+costumes.do">Costumes</a></li>
-                <li><a href="http://www.costumecraze.com/category/dog-costumes">More Dog Costumes</a></li>
-                <li><a href="http://www.costumeexpress.com/c/pet-costumes/_/N-aZ1u">Even More Dog Costumes</a></li>
-              </ul>
-      </div>
-    </div>
-
+    <div class="container"> <!--Begin Container-->
       <div class="row">
-        <div id="test">
+        <div class="col-sm-4">
+          <form id="dogForm">
+              <label for="name">What's the name of your dog?</label><br>
+                <input id="name" class="form-control" type="text"><br>
+
+              <label for="size">How big is your dog?</label><br>
+              <select id="size" class="form-control">
+                <option value="x-small">x-small</option>
+                <option value="small">small</option>
+                <option value="medium">medium</option>
+                <option value="large">large</option>
+                <option value="x-large">x-large</option>
+              </select><br>
+
+              <label for="age">How old is your dog?</label><br>
+              <select id="age" class="form-control">
+                <option value="puppy">puppy</option>
+                <option value="youngAdult">young adult</option>
+                <option value="adult">adult</option>
+                <option value="geriatric">geriatric</option>
+              </select><br>
+
+              <label for="time">What time are you available?</label><br>
+              <select id="time" class="form-control">
+                <option value="morning">morning</option>
+                <option value="afternoon">afternoon</option>
+                <option value="evening">evening</option>
+              </select><br>
+
+              <div class="form-group">
+                <label for="inputDate1">Play date?</label>
+                <input type="date" class="form-control" id="inputCalendar" placeholder="Date">
+              </div>
+
+              <div class="fileUpload btn btn-primary">
+                  <span>Upload a photo of you and your dog</span>
+                  <input type="file" class="upload" />
+              </div>
+              <br>
+              <br>
+
+              <button type="submit" class="btn btn-info" name="button">Submit</button>
+          </form>
+          <br>
+
+          <div id="findDate">
+            <p>Your dog's name: <span id="dname"></span></p>
+            <p>Your dog's age: <span id="dage"></span></p>
+            <p>Your dog's size: <span id="dsize"></span></p>
+            <p>Your available date: <span id="dcalendar"></span></p>
+            <p>Your preferred time: <span id="dtime"></span></p>
+            <hr>
+            <p>Your match's name: <span id="match-dname"></span></p>
+            <p>Your match's age: <span id="match-dage"></span></p>
+            <p>Your match's size: <span id="match-dsize"></span></p>
+            <img id = "sandyimg" src="img/Sandy.jpg" alt="Sandy" />
+            <img id = "gimliimg" src="img/Gimli.jpg" alt="Gimli" />
+            <img id= "apolloimg" src="img/Apollo.jpg" alt="Apollo" />
+            <img id= "snoopimg" src="img/SnoopDog.jpg" alt="Snoop Dog" />
+            <img id= "samuelimg" src="img/samuel.jpg" alt="Samuel" />
+          </div>
         </div>
-        <img id = "sandyimg" src="img/Sandy.jpg" alt="Sandy" />
-        <img id = "gimliimg" src="img/Gimli.jpg" alt="Gimli" />
-        <img id= "apolloimg" src="img/Apollo.jpg" alt="Apollo" />
-        <img id= "snoopimg" src="img/SnoopDog.jpg" alt="Snoop Dog" />
-      </div>
 
-      </div> <!--End Container-->
-
-</body>
-
-
-
-
-
+        <div class="col-sm-4 col-sm-offset-4" id="infoSection">
+          <h3>Addtional Information</h3>
+            <ul>
+              <li>Dog Adoption Tips</li>
+                <ul>
+                  <li><a href="https://www.petfinder.com/dogs/bringing-a-dog-home/tips-for-first-30-days-dog/">The first 30 days</a></li>
+                  <li><a href="http://www.quickanddirtytips.com/pets/dog-care/how-to-bring-a-newly-adopted-dog-home">Bringing them home</a></li>
+                  <li><a href="http://www.humanesociety.org/animals/dogs/tips/bringing_new_dog_home.html?referrer=https://www.google.com/">Humane Society</a></li>
+                  <li><a href="http://www.adoptapet.com/blog/10-tips-for-welcoming-home-your-newly-adopted-dog/">Tips</a></li>
+                </ul>
+              <li>Playing together safely</li>
+                <ul>
+                  <li><a href="https://www.cesarsway.com/dog-training/socialization/what-to-do-when-dogs-play-too-rough">Caesar's Advice</a></li>
+                  <li><a href="http://www.animalleague.org/expert-advice/training/training-articles/dog-puppy-articles/appropriate-play.html?referrer=https://www.google.com/">Animal League</a></li>
+                  <li><a href="http://thebark.com/content/your-dogs-rough-play-appropriate">thebark.com</a></li>
+                </ul>
+              <li>Dog Health</li>
+                <ul>
+                  <li><a href="http://www.fidosavvy.com/puppy-health.html">Puppy</a></li>
+                  <li><a href="http://www.hillspet.com/en/us/dog-care/routine-care/keeping-adult-dog-healthy">Adult</a></li>
+                  <li><a href="https://www.avma.org/public/PetCare/Pages/Caring-for-an-Older-Pet-FAQs.aspx">Senior</a></li>
+                </ul>
+              <li>Dog Training</li>
+                <ul>
+                  <li><a href="http://www.happygoluckydog.com/">Happy Go Lucky</a></li>
+                  <li><a href="http://synergybehavior.com/">Synergy Behavior</a></li>
+                  <li><a href="http://www.coopersdogtraining.com/">Cooper's Dog training</a></li>
+                </ul>
+              <li>Shop</li>
+                <ul>
+                  <li><a href="http://www.partycity.com/category/halloween+costumes/dog+costumes.do">Costumes</a></li>
+                  <li><a href="http://www.costumecraze.com/category/dog-costumes">More Dog Costumes</a></li>
+                  <li><a href="http://www.costumeexpress.com/c/pet-costumes/_/N-aZ1u">Even More Dog Costumes</a></li>
+                </ul>
+        </div>
+    </div> <!--End Container-->
+  </body>
 </html>
