@@ -53,7 +53,7 @@ var database = {
           "dname": "Samuel",
           "dage": "9",
           "dsize": "medium",
-          "imgtag": "#Samuelimg"
+          "imgtag": "#samuelimg"
       }
   ]
 }
@@ -88,7 +88,7 @@ $(document).ready(function() {
 
     $(selector).show();
 
-    $("#finddate").show();
+    $("#findDate").show();
     $("#dname").append(newDog.dname);
     $("#dage").append(newDog.dage);
     $("#dsize").append(newDog.dsize);
