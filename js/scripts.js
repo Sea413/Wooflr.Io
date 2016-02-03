@@ -74,7 +74,6 @@ $(function () {
 
 $(document).ready(function() {
   $("form#dogForm").submit(function(event) {
-    debugger;
     event.preventDefault();
     var newdname = $("input#name").val();
     var newdage = $("select#age").val();
