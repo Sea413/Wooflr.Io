@@ -74,6 +74,7 @@ $(function () {
 
 $(document).ready(function() {
   $("form#dogForm").submit(function(event) {
+    debugger;
     event.preventDefault();
     var newdname = $("input#name").val();
     var newdage = $("select#age").val();
@@ -83,13 +84,11 @@ $(document).ready(function() {
     var newDog = new Dog(newdname,newdage,newdsize,0);
     newDog.nameselect();
 
-    debugger;
-
     var selector = newDog.appendvar[0].imgtag.toString();
 
     $(selector).show();
 
-    $("#confirmForm").show();
+    $("#finddate").show();
     $("#dname").append(newDog.dname);
     $("#dage").append(newDog.dage);
     $("#dsize").append(newDog.dsize);
