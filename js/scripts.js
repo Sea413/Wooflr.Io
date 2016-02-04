@@ -25,40 +25,40 @@ if (this.dsize === database.dogs[0].dsize) {
 Dog.prototype.ageselect = function(){
 if (this.dage <= 15 && this.dage > 9 ) {
   this.score += 1;
-} else if (this.dage <= 15 && this.dage > 9) {
-  this.score += 2;
 } else if (this.dage <= 9 && this.dage > 6) {
+  this.score += 2;
+} else if (this.dage <= 6 && this.dage > 5) {
     this.score += 3;
-}else if (this.dage <= 6 && this.dage > 5) {
-    this.score += 4;
 }else if (this.dage <= 5 && this.dage > 2) {
+    this.score += 4;
+}else if (this.dage <= 2 && this.dage > 0) {
     this.score += 5;
   }
 };
 Dog.prototype.timeselect = function(){
 if (this.dtime === database.dogs[0].dtime) {
-  this.score += 1;
+  this.score += 5;
 } else if (this.dtime === database.dogs[1].dtime ) {
-  this.score += 2;
+  this.score += 3;
 } else if (this.dtime === database.dogs[2].dtime) {
-    this.score += 3;
-}else if (this.dtime === database.dogs[3].dtime) {
-    this.score += 4;
-}else if (this.dtime === database.dogs[4].dtime) {
     this.score += 5;
+}else if (this.dtime === database.dogs[3].dtime) {
+    this.score += 5;
+}else if (this.dtime === database.dogs[4].dtime) {
+    this.score += 3;
   }
   };
 
 Dog.prototype.nameselect = function(){
-  if (this.score > 0 && this.score <= 3 ) {
+  if (this.score > 0 && this.score <= 4 ) {
     this.appendvar.push(database.dogs[0]);
-  } else if (this.score > 3 && this.score <= 6) {
+  } else if (this.score > 4 && this.score <= 8) {
       this.appendvar.push(database.dogs[1]);
-  } else if (this.score > 6 && this.score <= 9) {
+  } else if (this.score > 8 && this.score <= 12) {
       this.appendvar.push(database.dogs[2]);
-  } else if (this.score > 9 && this.score <= 12) {
+  } else if (this.score > 12 && this.score <= 16) {
       this.appendvar.push(database.dogs[3]);
-  } else if (this.score > 12 && this.score <= 15) {
+  } else if (this.score > 16 && this.score <= 20) {
       this.appendvar.push(database.dogs[4]);
   }
 };
@@ -128,7 +128,7 @@ $(document).ready(function() {
     var newDog = new Dog(newdname,newdage,newdsize,newdtime,0);
     newDog.sizeselect();
     newDog.ageselect();
-    newDog.timeselect();
+    // newDog.timeselect();
     newDog.nameselect();
 
     var selector = newDog.appendvar[0].imgtag.toString();
