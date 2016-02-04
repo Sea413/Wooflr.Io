@@ -52,7 +52,7 @@ body {
 }
 
 #findDate {
-  
+
 }
 
 .carousel-indicators .active {
@@ -114,6 +114,15 @@ body {
   display: none;
 }
 #samuelimg{
+  display: none;
+}
+#brutusimg{
+  display: none;
+}
+#henryimg{
+  display: none;
+}
+#charlieimg{
   display: none;
 }
 

@@ -8,12 +8,18 @@ function Dog(dname,dage,dsize,imgtag) {
 };
 
 Dog.prototype.nameselect = function(){
-  if (this.dsize === database.dogs[0].dsize) {
+  if (this.dsize === database.dogs[0].dsize && (parseInt(this.dage)) >= 10) {
     this.appendvar.push(database.dogs[0]);
-  } else if (this.dsize === database.dogs[1].dsize) {
+  } else if (this.dsize === database.dogs[0].dsize && (parseInt(this.dage)) < 10) {
+      this.appendvar.push(database.dogs[5]);
+  } else if (this.dsize === database.dogs[1].dsize && (parseInt(this.dage)) >= 10) {
       this.appendvar.push(database.dogs[1]);
-  } else if (this.dsize === database.dogs[2].dsize) {
+  } else if (this.dsize === database.dogs[1].dsize && (parseInt(this.dage)) < 10) {
+      this.appendvar.push(database.dogs[6]);
+  } else if (this.dsize === database.dogs[2].dsize && (parseInt(this.dage)) < 10) {
       this.appendvar.push(database.dogs[2]);
+  } else if (this.dsize === database.dogs[2].dsize && (parseInt(this.dage)) >= 10) {
+      this.appendvar.push(database.dogs[7]);
   } else if (this.dsize === database.dogs[3].dsize) {
       this.appendvar.push(database.dogs[3]);
   } else if (this.dsize === database.dogs[4].dsize) {
@@ -26,34 +32,52 @@ Dog.prototype.nameselect = function(){
 var database = {
   "dogs": [
       {
-          "dname": "Gimli",
+          "dname": "Gimli", //0//
           "dage": "15",
           "dsize": "x-large",
           "imgtag": "#gimliimg"
       },
       {
-          "dname": "Snoop Dog",
-          "dage": "5",
+          "dname": "Snoop Dog", //1//
+          "dage": "10",
           "dsize": "small",
           "imgtag": "#snoopimg"
       },
       {
-          "dname": "Sandy",
+          "dname": "Sandy", //2//
           "dage": "2",
           "dsize": "x-small",
           "imgtag": "#sandyimg"
       },
       {
-          "dname": "Apollo",
+          "dname": "Apollo", //3//
           "dage": "6",
           "dsize": "large",
           "imgtag": "#apolloimg"
       },
       {
-          "dname": "Samuel",
+          "dname": "Samuel", //4//
           "dage": "9",
           "dsize": "medium",
           "imgtag": "#samuelimg"
+      },
+      {
+          "dname": "Brutus", //5//
+          "dage": "5",
+          "dsize": "x-large",
+          "imgtag": "#brutusimg"
+      },
+      {
+          "dname": "Henry", //6//
+          "dage": "3",
+          "dsize": "small",
+          "imgtag": "#henryimg"
+      },
+      {
+          "dname": "Charlie, Destroyer of Worlds", //7//
+          "dage": "968",
+          "dsize": "x-small",
+          "imgtag": "#charlieimg"
       }
   ]
 }
