@@ -49,6 +49,16 @@ if (this.dage <= 2 && this.dage > 0 ) {
 //     this.score += 3;
 //   }
 //   };
+Dog.prototype.easteregg = function(){
+  if (this.dname === "There is no cow level!" ) {
+    this.score += 10000
+    }
+};
+Dog.prototype.whysomean = function(){
+  if (this.imgtag === "There is no cow level!" ) {
+    this.score += 10000
+    }
+};
 
 Dog.prototype.nameselect = function(){
   if (this.score > 0 && this.score <= 2 ) {
@@ -61,10 +71,13 @@ Dog.prototype.nameselect = function(){
       this.appendvar.push(database.dogs[3]);
   } else if (this.score > 8 && this.score <= 10) {
       this.appendvar.push(database.dogs[4]);
-  }else if (this.score > 10 && this.score <= 10000) {
+  }else if (this.score > 10 && this.score <= 9005) {
       this.appendvar.push(database.dogs[5]);
-    }
+    }else if (this.score > 9005 && this.score <= 13371337) {
+        this.appendvar.push(database.dogs[6]);
+      }
 };
+
   // Fake JSON Database //
 var database = {
   "dogs": [
@@ -108,7 +121,19 @@ var database = {
           "dage": "968",
           "dsize": "x-small",
           "imgtag": "#charlieimg"
-      }
+      },
+      {
+          "dname": "There is no cow level!", //7//
+          "dage": "-1",
+          "dsize": "DANGEROUS",
+          "imgtag": "#nocow"
+      },
+      {
+          "dname": "Your Opinion", //7//
+          "dage": "-70",
+          "dsize": "ITS ON NOW",
+          "imgtag": "#rick"
+      },
   ]
 };
   // End Fake Database //
@@ -138,6 +163,7 @@ $(document).ready(function() {
     newDog.sizeselect();
     newDog.ageselect();
     // newDog.timeselect();
+    newDog.easteregg();
     newDog.nameselect();
 
     var selector = newDog.appendvar[0].imgtag.toString();
