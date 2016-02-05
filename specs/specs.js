@@ -16,6 +16,11 @@ it("Attempt to reverse engineer function inputs", function(){
 var testObject = new Dog ();
 expect(testObject.nameselect(3)).to.equal("Sandy", "2", "mediumish");
 });
+it("Determine easter inputs.", function(){
+var testObject = new Dog ();
+testObject.whysomean("C:\fakepath\thiscodeisbad.jpg")
+expect(testObject.easter).to.equal("C:\fakepath\thiscodeisbad.jpg");
+});
 });
 describe("Playdate", function() {
   it("stores info on playdate time, place, and attending dogs", function(){

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Enjoy the easter egg in the name field: There is no cow level! -->
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -103,14 +104,13 @@
               <input id="name" class="form-control" type="text"><br>
 
             <label for="size">How big is your dog?</label><br>
-              <select id="size" class="form-control">
-                <option disabled selected> -- select one -- </option>
-                <option value="x-small">x-small</option>
-                <option value="small">small</option>
-                <option value="medium">medium</option>
-                <option value="large">large</option>
-                <option value="x-large">x-large</option>
-              </select><br>
+            <select id="size" class="form-control">
+              <option value="X-small">x-small</option>
+              <option value="Small">small</option>
+              <option value="Medium">medium</option>
+              <option value="Large">large</option>
+              <option value="X-large">x-large</option>
+            </select><br>
 
             <label for="age">How old is your dog?</label><br>
             <select id="age" class="form-control">
@@ -132,15 +132,15 @@
               <option value="15">15</option>
               <option value="16">16</option>
               <option value="17">17</option>
-              <option value="18">18</option>
+              <option value="18">THIS IS RESERVED FOR CHARLIE DESTROYER OF WORLDS</option>
             </select><br>
 
             <label for="time">What time are you available?</label><br>
             <select id="time" class="form-control">
               <option disabled selected> -- select one -- </option>
-              <option value="morning">morning</option>
-              <option value="afternoon">afternoon</option>
-              <option value="evening">evening</option>
+              <option value="Morning">Morning</option>
+              <option value="Afternoon">Afternoon</option>
+              <option value="Evening">Evening</option>
             </select><br>
 
             <div class="form-group">
@@ -150,11 +150,14 @@
 
             <div class="fileUpload btn btn-primary">
                 <span>Upload a photo of you and your dog</span>
-                <input type='file' />
+                <input id="testegg" type='file' />
             </div>
             <br>
             <br>
-            <button type="submit" class="btn btn-info" name="button">Submit</button>
+            <button id="submitButton" type="submit" class="btn btn-info" name="button">Submit</button>
+          </form>
+          <form id="newForm">
+            <button id="hidebutton" type="submit" class="btn btn-info" name="button">Add another</button>
           </form>
         </div> <!--End column-->
 
@@ -218,6 +221,11 @@
             <img id= "apolloimg" class="img-responsive img-rounded" src="img/Apollo.jpg" alt="Apollo" />
             <img id= "snoopimg" class="img-responsive img-rounded" src="img/SnoopDog.jpg" alt="Snoop Dog" />
             <img id= "samuelimg" class="img-responsive img-rounded" src="img/samuel.jpg" alt="Samuel" />
+            <img id= "charlieimg" class="img-responsive img-rounded" src="img/Charlie.jpg" alt="Charlie" />
+            <img id= "nocow" class="img-responsive img-rounded" src="img/.nocowlevel.jpg" alt="Welcome" />
+            <img id= "rick" class="img-responsive img-rounded" src="img/.easter2.gif" alt="This is how you feel?" />
+            <img id= "testfriend" class="img-responsive img-rounded" src="img/testdogfriend.gif" alt="Truetest" />
+            <!-- <img id= "rick2" class="img-responsive img-rounded" src="img/.easter5.gif" alt="This is how you feel?" /> -->
           </div> <!--End column-->
         </div> <!--End row-->
       </div>

@@ -88,8 +88,24 @@ body {
 #samuelimg{
   display: none;
 }
-
-/* MEDIA QUERIES */
+#newForm{
+  display: none;
+}
+#charlieimg{
+  display: none;
+}
+#nocow{
+  display: none;
+}
+#rick{
+  display: none;
+}
+#rick2{
+  display: none;
+}
+#testfriend{
+  display: none;
+}
 
 @media only screen and (min-width : 480px) {
 
@@ -100,7 +116,7 @@ body {
     background-repeat: no-repeat;
     height: 350px;
   }
-
+}
 
 @media only screen and (min-width : 768px) {
 
@@ -130,4 +146,3 @@ body {
     text-align: right;
     border-left: solid 1px #f2f2f2;
   }
-}
