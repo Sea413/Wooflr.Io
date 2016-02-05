@@ -35,6 +35,7 @@ body {
   width: 100%;
   height: 350px;
   margin-top: 0;
+  font-size: 1.1em;
 }
 
 .jumbotron h1 {
@@ -127,9 +128,10 @@ body {
     background-position: center;
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    font-size: 1.2em;
   }
 
-  .matchDisplay{
+  .matchDisplay {
     text-align: right;
     border-left: solid 1px #f2f2f2;
   }
@@ -142,9 +144,26 @@ body {
     background-position: center;
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    font-size: 1.3em;
   }
 
   .matchDisplay{
     text-align: right;
     border-left: solid 1px #f2f2f2;
   }
+
+@media only screen  and (min-width : 1824px) {
+  .jumbotron {
+    background-color: white;
+    background-image: url("../img/dogbackground.jpg");
+    background-position: center;
+    background-size: 3000px 864px;
+    background-repeat: no-repeat;
+    height: 690px;
+    font-size: 3em;
+  }
+  .matchDisplay{
+    text-align: right;
+    border-left: solid 1px #f2f2f2;
+  }
+}
