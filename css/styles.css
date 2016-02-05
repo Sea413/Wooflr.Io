@@ -28,17 +28,18 @@ body {
 
 .jumbotron {
   text-align: center;
-  background-image: url("../img/dogbackground.jpg");
+  background-image: url("../img/dogbackground-phone.jpg");
   background-position: center;
   background-size: 100% 100%;
   background-repeat: no-repeat;
   width: 100%;
-  height: 400px;
+  height: 350px;
   margin-top: 0;
 }
 
 .jumbotron h1 {
   margin-top: 0%;
+  font-size: 3em;;
 }
 
 #infoSection {
@@ -54,10 +55,6 @@ body {
   font-weight: bold;
 }
 
-.matchDisplay{
-  text-align: right;
-  border-left: solid 1px #f2f2f2;
-}
 
 #inputCalendar {
   width: 300px;
@@ -93,3 +90,61 @@ body {
 #samuelimg{
   display: none;
 }
+#newForm{
+  display: none;
+}
+#charlieimg{
+  display: none;
+}
+#nocow{
+  display: none;
+}
+#rick{
+  display: none;
+}
+#rick2{
+  display: none;
+}
+#testfriend{
+  display: none;
+}
+
+@media only screen and (min-width : 480px) {
+
+  .jumbotron {
+    background-image: url("../img/dogbackground-lg-phone.jpg");
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 350px;
+  }
+}
+
+@media only screen and (min-width : 768px) {
+
+  .jumbotron {
+    background-image: url("../img/dogbackground-tab.jpg");
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+
+  .matchDisplay{
+    text-align: right;
+    border-left: solid 1px #f2f2f2;
+  }
+}
+
+@media only screen and (min-width : 992px) {
+
+  .jumbotron {
+    background-image: url("../img/dogbackground.jpg");
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+
+  .matchDisplay{
+    text-align: right;
+    border-left: solid 1px #f2f2f2;
+  }
