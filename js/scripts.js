@@ -1,11 +1,12 @@
-function Dog(dname,dage,dsize,dtime,imgtag,score) {
+function Dog(dname,dage,dsize,dtime,easter,imgtag,score) {
   this.dname = dname;
   this.dage = dage;
   this.dsize = dsize;
   this.dtime =dtime;
+  this.easter =easter;
   this.imgtag = imgtag;
-  this.appendvar = [];
   this.score = 0;
+  this.appendvar = [];
 };
 
 Dog.prototype.sizeselect = function(){
@@ -21,6 +22,19 @@ if (this.dsize === database.dogs[0].dsize) {
     this.score += 5;
   }
 };
+Dog.prototype.easteregg = function(){
+  if (this.dname === "There is no cow level!" ) {
+    this.score += 10000
+    }
+};
+Dog.prototype.whysomean = function(){
+  if (this.easter === "C:\\fakepath\\thiscodeisbad.jpg" ) {
+    this.score += 1337500
+  }else if (this.easter === "C:\\fakepath\\testdog.jpg") {
+        this.score += 13375000000;
+      }
+      console.log(this.score);
+};
 Dog.prototype.ageselect = function(){
 if (this.dage <= 2 && this.dage > 0 ) {
   this.score += 1;
@@ -35,47 +49,6 @@ if (this.dage <= 2 && this.dage > 0 ) {
   }else if (this.dage > 15) {
       this.score += 9000;
     }
-};
-// Dog.prototype.timeselect = function(){
-// if (this.dtime === database.dogs[0].dtime) {
-//   this.score += 5;
-// } else if (this.dtime === database.dogs[1].dtime ) {
-//   this.score += 3;
-// } else if (this.dtime === database.dogs[2].dtime) {
-//     this.score += 5;
-// }else if (this.dtime === database.dogs[3].dtime) {
-//     this.score += 5;
-// }else if (this.dtime === database.dogs[4].dtime) {
-//     this.score += 3;
-//   }
-//   };
-Dog.prototype.easteregg = function(){
-  if (this.dname === "There is no cow level!" ) {
-    this.score += 10000
-    }
-};
-Dog.prototype.whysomean = function(){
-  if (this.imgtag === "There is no cow level!" ) {
-    this.score += 10000
-    }
-};
-
-Dog.prototype.nameselect = function(){
-  if (this.score > 0 && this.score <= 2 ) {
-    this.appendvar.push(database.dogs[0]);
-  } else if (this.score > 2 && this.score <= 4) {
-      this.appendvar.push(database.dogs[1]);
-  } else if (this.score >4 && this.score <= 6) {
-      this.appendvar.push(database.dogs[2]);
-  } else if (this.score > 6 && this.score <= 8) {
-      this.appendvar.push(database.dogs[3]);
-  } else if (this.score > 8 && this.score <= 10) {
-      this.appendvar.push(database.dogs[4]);
-  }else if (this.score > 10 && this.score <= 9005) {
-      this.appendvar.push(database.dogs[5]);
-    }else if (this.score > 9005 && this.score <= 13371337) {
-        this.appendvar.push(database.dogs[6]);
-      }
 };
 
   // Fake JSON Database //
@@ -129,17 +102,25 @@ var database = {
           "imgtag": "#nocow"
       },
       {
-          "dname": "Your Opinion", //7//
+          "dname": "That was uncalled for!", //7//
           "dage": "-70",
           "dsize": "ITS ON NOW",
           "imgtag": "#rick"
+
+      },
+      {
+          "dname": "This is the friend of the test dog", //7//
+          "dage": "5",
+          "dsize": "Small",
+          "imgtag": "#testfriend"
+
       },
   ]
 };
-  // End Fake Database //
 
 $(function () {
      $(":file").change(function () {
+
          if (this.files && this.files[0]) {
              var reader = new FileReader();
              reader.onload = imageIsLoaded;
@@ -147,10 +128,32 @@ $(function () {
          }
      });
  });
- function imageIsLoaded(e) {
-     $('#myImg').attr('src', e.target.result);
+ function imageIsLoaded(ghost) {
+     $('#myImg').attr('src', ghost.target.result);
  };
 
+ Dog.prototype.nameselect = function(){
+   if (this.score > 0 && this.score <= 2 ) {
+     this.appendvar.push(database.dogs[0]);
+   } else if (this.score > 2 && this.score <= 4) {
+       this.appendvar.push(database.dogs[1]);
+   } else if (this.score >4 && this.score <= 6) {
+       this.appendvar.push(database.dogs[2]);
+   } else if (this.score > 6 && this.score <= 8) {
+       this.appendvar.push(database.dogs[3]);
+   } else if (this.score > 8 && this.score <= 10) {
+       this.appendvar.push(database.dogs[4]);
+   }else if (this.score > 10 && this.score <= 9005) {
+       this.appendvar.push(database.dogs[5]);
+     }else if (this.score > 9005 && this.score <= 13371) {
+         this.appendvar.push(database.dogs[6]);
+       }else if (this.score > 13371 && this.score <= 13375000) {
+             this.appendvar.push(database.dogs[7]);
+             }
+             else if (this.score > 13375000 && this.score <= 100000000000000) {
+                   this.appendvar.push(database.dogs[8]);
+                   }
+ };
 $(document).ready(function() {
   $("form#dogForm").submit(function(event) {
     event.preventDefault();
@@ -159,11 +162,12 @@ $(document).ready(function() {
     var newdsize = $("select#size").val();
     var newdtime = $("select#time").val();
     var dcalendar = $("input#inputCalendar").val();
-    var newDog = new Dog(newdname,newdage,newdsize,newdtime,0);
+    var neweaster = $("input#testegg").val();
+    var newDog = new Dog(newdname,newdage,newdsize,newdtime,neweaster,0);
     newDog.sizeselect();
     newDog.ageselect();
-    // newDog.timeselect();
     newDog.easteregg();
+    newDog.whysomean();
     newDog.nameselect();
 
     var selector = newDog.appendvar[0].imgtag.toString();
