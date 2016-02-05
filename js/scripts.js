@@ -139,7 +139,7 @@ $(document).ready(function() {
     $("#dname").html(newDog.dname);
     $("#dage").html(newDog.dage);
     $("#dsize").html(newDog.dsize);
-    $("#dtime").html(dtime);
+    $("#dtime").html(newdtime);
     $("#dcalendar").html(dcalendar);
     $("#match-dname").html(newDog.appendvar[0].dname);
     $("#match-dage").html(newDog.appendvar[0].dage);
