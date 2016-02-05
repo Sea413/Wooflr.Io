@@ -1,3 +1,4 @@
+
 function Dog(dname,dage,dsize,dtime,easter,imgtag,score) {
   this.dname = dname;
   this.dage = dage;
@@ -5,8 +6,8 @@ function Dog(dname,dage,dsize,dtime,easter,imgtag,score) {
   this.dtime =dtime;
   this.easter =easter;
   this.imgtag = imgtag;
-  this.score = 0;
   this.appendvar = [];
+  this.score = 0;
 };
 
 Dog.prototype.sizeselect = function(){
@@ -49,6 +50,34 @@ if (this.dage <= 2 && this.dage > 0 ) {
   }else if (this.dage > 15) {
       this.score += 9000;
     }
+};
+
+Dog.prototype.timeselect = function(){
+if (this.dtime === database.dogs[0].dtime) {
+  this.score += 5;
+} else if (this.dtime === database.dogs[1].dtime ) {
+  this.score += 3;
+} else if (this.dtime === database.dogs[2].dtime) {
+    this.score += 5;
+}else if (this.dtime === database.dogs[3].dtime) {
+    this.score += 5;
+}else if (this.dtime === database.dogs[4].dtime) {
+    this.score += 3;
+  }
+  };
+
+Dog.prototype.nameselect = function(){
+  if (this.score > 0 && this.score <= 4 ) {
+    this.appendvar.push(database.dogs[0]);
+  } else if (this.score > 4 && this.score <= 8) {
+      this.appendvar.push(database.dogs[1]);
+  } else if (this.score > 8 && this.score <= 12) {
+      this.appendvar.push(database.dogs[2]);
+  } else if (this.score > 12 && this.score <= 16) {
+      this.appendvar.push(database.dogs[3]);
+  } else if (this.score > 16 && this.score <= 20) {
+      this.appendvar.push(database.dogs[4]);
+  }
 };
 
   // Fake JSON Database //
@@ -96,20 +125,20 @@ var database = {
           "imgtag": "#charlieimg"
       },
       {
-          "dname": "There is no cow level!", //7//
+          "dname": "There is no cow level!",
           "dage": "-1",
           "dsize": "DANGEROUS",
           "imgtag": "#nocow"
       },
       {
-          "dname": "That was uncalled for!", //7//
+          "dname": "That was uncalled for!",
           "dage": "-70",
           "dsize": "ITS ON NOW",
           "imgtag": "#rick"
 
       },
       {
-          "dname": "This is the friend of the test dog", //7//
+          "dname": "This is the friend of the test dog",
           "dage": "5",
           "dsize": "Small",
           "imgtag": "#testfriend"
