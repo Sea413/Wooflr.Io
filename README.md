@@ -1,37 +1,43 @@
-# _{Application Name}_
+# _Wooflr_
 
-#### _{Brief description of application}, {Date of current version}_
+#### _A dog play date finder, 2/5/2015_
 
-#### By _**{List of contributors}**_
+#### By _**Sean Peerenboom and David Remington and Keir Staple and Christine Tacha**_
 
 ## Description
 
-_{This is a detailed description of your application. Its purpose and usage.  Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. }_
+_The intention of the app is to bring dog lovers together and arrange times for dog play dates. It will peer into the very essence of the dog and their owner and select a match that will develop a life long bond. It also reads the future but this feature is currently being patched due to the last windows update...sorry. :(_
 
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
+* _This application can be run through the browser and does not require set up instructions_
 
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this app depends on?}_
+_No server maintenance required_
 
 ## Known Bugs
 
-_{Are there issues that have not yet been resolved that you want to let users know you know?  Outline any issues that would impact use of your application.  Share any workarounds that are in place. }_
+_No known bugs for the moment. For fun type in There is no cow level! into the name bar for an easter egg._
 
 ## Support and contact details
 
-_{Let people know what to do if they run into any issues or have questions, ideas or concerns.  Encourage them to contact you or make a contribution to the code.}_
+_For support contact the NSA at
+Acquisition Resource Center (ARC)
+Phone: (410) 694-0750
+Fax: (410) 694-0773
+E-mail: nsaarc@nsaarc.net
+
+Community Relations:
+The Office of State, Local & Community Relations
+Phone: (301) 688-1818
+E-mail: DE_Team@nsa.gov_
+
 
 ## Technologies Used
 
-_{Tell me about the languages and tools you used to create this app. Assume that I know you probably used HTML and CSS. If you did something really cool using only HTML, point that out.}_
+_The programs used are HTML, Javascript, CSS, and JSON. Libraries that were used include Bootstrap and JQuery._
 
 ### License
 
-*{Determine the license under which this application can be used.  See below for more details on licensing.}*
+*This application has been filed under international maritime law and should process all legal requests through the International Criminal Court or the Iron Throne.*
 
-Copyright (c) 2015 **_{List of contributors or company name}_**
+Copyright (c) 2015 **_Wooflr_**
